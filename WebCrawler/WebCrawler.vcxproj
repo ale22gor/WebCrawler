@@ -116,10 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HttpConnector.cpp" />
+    <ClCompile Include="LinkParser.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HtmlParser.h" />
     <ClInclude Include="HttpConnector.h" />
+    <ClInclude Include="LinkParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,9 +21,18 @@
     <ClCompile Include="HttpConnector.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="LinkParser.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HttpConnector.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlParser.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkParser.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
