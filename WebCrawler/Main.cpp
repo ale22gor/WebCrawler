@@ -17,7 +17,7 @@ int main() {
 	a.SetAddrInfo();
 	a.ConnectToAddr();
 	a.SendToServer();
-	a.a = &b;
+	a.listOfParsers.push_back(&b);
 	a.RecieveFromServer();
 	return 0;
 }

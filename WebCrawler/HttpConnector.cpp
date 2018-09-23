@@ -70,7 +70,12 @@ int HttpConnector::RecieveFromServer()
 			printf("recv failed: %d\n", WSAGetLastError());
 		//for (int i = 0; i < iResult; i++)
 			//printf("%c", buff[i]);
-		a->parseStr(buff);
+		auto i = listOfParsers.begin();
+		while (i != listOfParsers.end())
+		{
+			(*i)->parseStr(buff);
+			i++;
+		}
 	} while (iResult > 0);
 
 	return 0;

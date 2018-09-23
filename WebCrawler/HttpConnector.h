@@ -18,12 +18,10 @@ class HttpConnector
 	char buff[MAX_PACKET_SIZE];
 	addrinfo hints;
 	addrinfo *result;
-	std::vector<HtmlParser *> listOfParsers;
 	
 
 public:
-	//remove this shit
-	HtmlParser * a;
+	std::vector<HtmlParser *> listOfParsers;
 	HttpConnector(const char * req,const char* host);
 	~HttpConnector();
 	int SetAddrInfo();
