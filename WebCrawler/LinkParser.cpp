@@ -13,12 +13,11 @@ LinkParser::~LinkParser()
 
 void LinkParser::parseStr(const char * str)
 {
-	char linkSequence[]{ '<','a' };
-	const char * pch;
-	pch = strchr(str, linkSequence[Iterrator]);
-	while (pch != NULL)
-	{
-		printf("found at %d\n", pch - str + 1);
-		pch = strchr(pch + 1, linkSequence[Iterrator]);
-	}
+	std::regex reg{ "<a href=\".+\s " };
+	std::smatch match;
+	std::string what{str};
+	std::regex_search(what,match,reg);
+	for (auto x : match)
+		std::cout << x << " ";
+	
 }
