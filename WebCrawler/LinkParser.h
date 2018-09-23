@@ -10,6 +10,6 @@ class LinkParser :
 public:
 	LinkParser();
 	~LinkParser();
-	virtual void parseStr(const char* str);
+	 void parseStr(const char* str);
 };
 

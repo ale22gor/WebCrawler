@@ -19,8 +19,11 @@ class HttpConnector
 	addrinfo hints;
 	addrinfo *result;
 	std::vector<HtmlParser *> listOfParsers;
+	
 
 public:
+	//remove this shit
+	HtmlParser * a;
 	HttpConnector(const char * req,const char* host);
 	~HttpConnector();
 	int SetAddrInfo();

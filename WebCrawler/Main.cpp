@@ -1,4 +1,5 @@
 #include "HttpConnector.h"
+#include "LinkParser.h"
 #include<string>
 
 
@@ -11,10 +12,12 @@ int main() {
 	gethtml += "Accept-Language: fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3\r\n";
 	gethtml += "\r\n";
 
+	LinkParser b;
 	HttpConnector a(gethtml.c_str(),"www.alkcarb.myspecies.info");
 	a.SetAddrInfo();
 	a.ConnectToAddr();
 	a.SendToServer();
+	a.a = &b;
 	a.RecieveFromServer();
 	return 0;
 }

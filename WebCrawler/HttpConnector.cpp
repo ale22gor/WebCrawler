@@ -68,9 +68,9 @@ int HttpConnector::RecieveFromServer()
 			printf("Connection closed\n");
 		else
 			printf("recv failed: %d\n", WSAGetLastError());
-		for (int i = 0; i < iResult; i++)
-			printf("%c", buff[i]);
-		// bridge design pattern
+		//for (int i = 0; i < iResult; i++)
+			//printf("%c", buff[i]);
+		a->parseStr(buff);
 	} while (iResult > 0);
 
 	return 0;
